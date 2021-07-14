@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saazu: Current Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  </head>
+  <body class="layout">
+    <div class="content">
+      <section>
+        <p>
+          The project I am currently working is leading me to learn 3 things, React, Firebase 
+          and consequently GCP products and finally reactive systems (this is why I am reading Reactive Design 
+          Patterns by Roland Kuhn). I am building a payment and fulfillment system that listens for messages 
+          from a payments provider and based on the response, either
+          <ol>
+            <li>
+              adds some digital product to a user's account, sends them an notification, and logs it in GCP Big Query for analytics, or
+            </li>
+            <li>
+              sends the user a notification if the payment failed and then logs it in GCP Big Query
+            </li>
+          </ol>
+        </p>
+        <p>
+          So far my solution involves the following:
+          <ul>
+            <li>
+              Firebase Functions(an onRequest function that acts a web hook)
+            </li>
+            <li>
+              Pub/Sub functions to handle the fulfillment of different groups of 
+              products and sending notifications. I am also using Pub/Sub to set up 
+              dead letter queues(dead letter queues are a data store containing any message 
+              failures (wrong or unhandled event types, any event that leads to the system 
+              throwing an error, etc)
+            </li>
+            <li>
+              Firebase Cloud Messaging for in-app notifications
+            </li>
+            <li>
+              Big Query for the analytics data store
+            </li>
+            <li>
+              Cloud Events: This is a standard for describing event data in a common way, 
+              across cloud providers, which is really sweet imo. I am using CloudEvents 
+              Generator to generate a library for all the events I will be handling in this 
+              system
+            </li>
+          </ul>
+        </p>
+        <p>
+          I have some previous experience with Firebase functions so this is not a brutal an 
+          experience as I thought it would. A second part of the project involves realtime data 
+          updates and I suspect, this is where I will bleed. Until then, we charge.
+        </p>
+        <p>To be continued...</p>
+      </section>
+    </div>
+  </body>
+</html>
