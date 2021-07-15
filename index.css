@@ -2,20 +2,19 @@
   margin-top: auto;
   margin-bottom: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-align:justify;
 }
 
-
 @media only screen and (max-width: 600px) {
   .content {
     min-height: 500;
     background-color: #ededed;
     width: 80%;
-    padding: 3em;
+    padding: 1em;
     margin: 2em 0.5em 0em 0.5em;
   }
 }
@@ -25,7 +24,7 @@
     min-height: 500;
     background-color: #ededed;
     width: 70%;
-    padding: 3em;
+    padding: 1em;
     margin-top: 2em;
   }
 }
