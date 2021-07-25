@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saazu: Current Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../index.css">
+  </head>
+  <body class="layout">
+    
+    <div class="content">
+      <section>
+        <a href="../index.html">Home Page</a>
+      </section>
+      <h2>My intuitions about serverless</h2>
+      <p>25th July, 2021</p>
+      <section>
+        <p>
+          Whenever I write some code, two things are usually forefront in my mind — 
+          Business Logic á la direct value delivered to the customer or user, and 
+          Site Reliability. Everything else is subservient to these two ends, from 
+          code readability to the usual devops practices to company culture.
+        </p>
+        <p>
+          The first time I deployed a serverless function, I felt a very delicious 
+          rush. My immediate reaction was "Wow, this is so easy!". I started web 
+          development around 2016 and right from the bat, I was overwhelmed by the 
+          sheer breath of tooling I had to familiarise myself before I could deploy 
+          anything non trivial. Serverless functions took a heavy weight off my 
+          shoulders. I have not voluntarily set up a web server since the first time 
+          I deployed a serverless function, except to learn FastifyJs and to sharpen 
+          my familiarity with MongoDb (I love document databases. What is a table 😅).
+        </p>
+      </section>
+      <section>
+        <p>
+          What do I like about serverless functions? First, I like the clearer 
+          delineation of concerns, between the areas, forefront in my mind when I 
+          write any code(Business Logic and Site Reliability). My strategy is simple: 
+          each function encapsulates one unit of business logic. Put another way, I 
+          should be able to map each function directly to some value delivered directly 
+          to the user, where user here is a person or some intermediate or hidden 
+          software service. 
+        </p>
+        <p>
+          Any sufficiently complex software system will need some notion of what is 
+          an acceptable level of availability. When I think of site reliability I 
+          think about availability and mean time to repair, fault tolerance(how do 
+          make sure components of the system fail without the whole thing crashing). 
+          I also think of three guiding principles: Eliminating toil, embracing risk 
+          and transparent service level objectives. The point of this word salad is 
+          that serverless functions make this significantly easier to reason about, 
+          plan for and execute. Whether it is GCP/Firebease, AWS or Azure, transparent 
+          SLAs from cloud service providers mean transparent SLAs for your system. 
+          Monitoring and observability work is stripped to actual monitoring and 
+          observability and much mundane setup and recursive maintenance work(everything 
+          you build to maintain must in itself be maintained). Product teams can c
+          onsequently move a lot faster.
+        </p>
+        <p>
+          Later I will add more writing going into more details about my intuitions 
+          especially as update them with new experiences. My personal intuition is 
+          that serverless is inevitable for the industry as whole. Most importantly, 
+          I believe serverless significantly reduces the barrier to shipping quality, 
+          resiliant code and software. Developers can spend more time writing business 
+          logic and less time performing arcane swishes and swashes that only make sense 
+          to the Guild of Software developers. Check out Firebase functions or AWS 
+          lambda functions
+        </p>
+      </section>
+      <section>
+        <a href="../index.html">Home Page</a>
+      </section>
+    </div>
+  </body>
+</html>
